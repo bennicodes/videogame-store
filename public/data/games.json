@@ -1,0 +1,272 @@
+[
+  {
+    "title": "Shadow Realm",
+    "genre": "Fantasy RPG",
+    "releaseYear": 2025,
+    "releasedBy": "Mystic Games",
+    "onSale": true,
+    "rating": 9.3,
+    "price": 49.99,
+    "overview": "Embark on a journey through the mystical Shadow Realm, battling dark forces and uncovering ancient secrets.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348194/shadow-realm_wlixys.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["fantasy", "RPG", "adventure"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Cyber Nexus",
+    "genre": "Sci-Fi Action",
+    "releaseYear": 2024,
+    "releasedBy": "Neon Studios",
+    "onSale": true,
+    "rating": 8.7,
+    "price": 59.99,
+    "overview": "Dive into a futuristic world where cybernetic enhancements and AI rule. Fight for survival in the Cyber Nexus.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348194/cyber-nexus_kildds.webp",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["sci-fi", "action", "cyberpunk"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Mystic Quest",
+    "genre": "Adventure",
+    "releaseYear": 2023,
+    "releasedBy": "AdventureWorks",
+    "onSale": true,
+    "rating": 9.0,
+    "price": 39.99,
+    "overview": "Join a band of heroes on a quest to save their kingdom from an ancient evil in this epic adventure.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348194/mystic-quest_ooec6z.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["adventure", "fantasy", "story-driven"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Galactic Wars",
+    "genre": "Space Shooter",
+    "releaseYear": 2022,
+    "releasedBy": "StarForge",
+    "onSale": true,
+    "rating": 8.5,
+    "price": 29.99,
+    "overview": "Pilot your spaceship through intense battles in the galaxy, defending against alien invasions.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348195/galactic-wars_fcaybl.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["space", "shooter", "action"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Dungeon Crawler",
+    "genre": "Roguelike",
+    "releaseYear": 2021,
+    "releasedBy": "Epic Games",
+    "onSale": false,
+    "rating": 8.9,
+    "price": 19.99,
+    "overview": "Explore randomly generated dungeons, defeat monsters, and collect treasures in this roguelike adventure.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348194/dungeon-crawler_uc1rvs.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["roguelike", "dungeon", "exploration"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Stealth Assassin",
+    "genre": "Stealth Action",
+    "releaseYear": 2020,
+    "releasedBy": "Shadow Studios",
+    "onSale": false,
+    "rating": 9.1,
+    "price": 34.99,
+    "overview": "Become a master assassin, using stealth and strategy to eliminate targets in a modern city.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348194/stealth-assassin_edzeq8.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["stealth", "action", "strategy"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Ancient Legends",
+    "genre": "Historical RPG",
+    "releaseYear": 2019,
+    "releasedBy": "Legendary Games",
+    "onSale": false,
+    "rating": 9.4,
+    "price": 39.99,
+    "overview": "Travel back in time to ancient civilizations, uncovering legends and battling mythical creatures.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348194/ancient-legends_jj9rwe.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["historical", "RPG", "mythology"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Virtual Reality",
+    "genre": "Simulation",
+    "releaseYear": 2025,
+    "releasedBy": "SimTech",
+    "onSale": true,
+    "rating": 8.8,
+    "price": 49.99,
+    "overview": "Experience life in a fully immersive virtual reality world, where you can create and explore without limits.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/virtual-reality_sdifdb.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["simulation", "VR", "exploration"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Zombie Apocalypse",
+    "genre": "Survival Horror",
+    "releaseYear": 2024,
+    "releasedBy": "HorrorWorks",
+    "onSale": true,
+    "rating": 9.2,
+    "price": 59.99,
+    "overview": "Survive the zombie apocalypse, scavenging for resources and fighting off hordes of the undead.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/zombie-apocalypse_ht9qk3.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["horror", "survival", "action"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Alien Invasion",
+    "genre": "Sci-Fi Horror",
+    "releaseYear": 2023,
+    "releasedBy": "Galactic Games",
+    "onSale": true,
+    "rating": 8.6,
+    "price": 39.99,
+    "overview": "Defend Earth from a terrifying alien invasion, using advanced technology and strategy.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/alien-invasion_m4uzun.webp",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["sci-fi", "horror", "strategy"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Fantasy Kingdom",
+    "genre": "Fantasy Strategy",
+    "releaseYear": 2022,
+    "releasedBy": "Kingdom Studios",
+    "onSale": true,
+    "rating": 9.0,
+    "price": 29.99,
+    "overview": "Build and manage your own fantasy kingdom, engaging in epic battles and quests.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/fantasy-kingdom_glzn6h.webp",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["fantasy", "strategy", "management"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Robot Rebellion",
+    "genre": "Action Sci-Fi",
+    "releaseYear": 2021,
+    "releasedBy": "TechGames",
+    "onSale": false,
+    "rating": 8.7,
+    "price": 24.99,
+    "overview": "Lead a rebellion against rogue robots in a dystopian future, using advanced weaponry and tactics.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/robot-rebelion_ege2ei.webp",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["sci-fi", "action", "rebellion"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Mystery Manor",
+    "genre": "Puzzle Adventure",
+    "releaseYear": 2020,
+    "releasedBy": "PuzzleWorks",
+    "onSale": false,
+    "rating": 9.1,
+    "price": 19.99,
+    "overview": "Solve intricate puzzles and uncover secrets in the mysterious Manor, filled with hidden treasures.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/mystery_manor_kzmjxo.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["puzzle", "adventure", "mystery"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Dragon's Lair",
+    "genre": "Fantasy RPG",
+    "releaseYear": 2019,
+    "releasedBy": "Epic Fantasy",
+    "onSale": false,
+    "rating": 9.3,
+    "price": 39.99,
+    "overview": "Embark on a quest to defeat dragons and save the kingdom in this epic fantasy RPG.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/dragon_s_lair_s2l8lr.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["fantasy", "RPG", "adventure"],
+    "stockAvailability": true
+  },
+  {
+    "title": "Celestial Odyssey",
+    "genre": "Sci-Fi Adventure",
+    "releaseYear": 2025,
+    "releasedBy": "Stellar Games",
+    "onSale": true,
+    "rating": 9.4,
+    "price": 59.99,
+    "overview": "Embark on an epic journey through the cosmos, exploring distant planets and uncovering ancient mysteries.",
+    "imageUrl": "https://res.cloudinary.com/dy9fpzdbz/image/upload/v1746348193/celestial-oddisey_ree5mg.jpg",
+    "platforms": {
+      "PC": true,
+      "PlayStation 5": true,
+      "Xbox Series X": true
+    },
+    "tags": ["sci-fi", "adventure", "exploration"],
+    "stockAvailability": true
+  }
+]

@@ -1,0 +1,52 @@
+/* Hero Section Styling */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/hero-section.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--text-light);
+}
+
+/* Hero Content */
+.heroContent {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+}
+
+/* Headings */
+.heroTitle {
+  font-size: var(--xx-large-font-size);
+  font-weight: bold;
+}
+
+/* Subheading */
+.heroSubtitle {
+  font-size: var(--medium-font-size);
+  opacity: 0.9;
+}
+
+/* CTA Button */
+.ctaButton {
+  background-color: var(--text-light);
+  color: var(--primary-color);
+  padding: var(--space-medium) var(--space-large);
+  font-size: var(--base-font-size);
+  font-weight: bold;
+  border-radius: var(--border-radius-small);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}

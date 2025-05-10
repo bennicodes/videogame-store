@@ -1,0 +1,32 @@
+.gameCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+  padding: var(--space-medium);
+
+  border-radius: var(--border-radius-medium);
+  background-color: var(--card-color);
+}
+.imageContainer {
+  width: 100%;
+}
+.gameImage {
+  width: 100%;
+  border-radius: var(--border-radius-medium);
+}
+.addToCartBtn {
+  height: 32px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-radius: var(--border-radius-small);
+  border: none;
+  transition: all 0.3s ease-in-out;
+  font-size: var(--base-font-size);
+}
+.addToCartBtn:hover {
+  background-color: var(--secondary-color);
+}
+.gameLink {
+  color: var(--primary-color);
+}
