@@ -21,6 +21,34 @@ const SignUp = () => {
     const { name, value } = e.target;
     setSignUpFormData((prevData) => ({ ...prevData, [name]: value }));
   };
+  // Retrieving the selected image and displaying preview
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith("image/")) {
+      const previewUrl = URL.createObjectURL(file);
+      setSignUpFormData((prevData) => ({
+        ...prevData,
+        profilePicture: file,
+        previewUrl: previewUrl,
+      }));
+      console.log("File selected:", file);
+    } else {
+      setSignUpFormData((prevData) => ({
+        ...prevData,
+        profilePicture: null,
+        previewUrl: "",
+      }));
+    }
+  };
+  // Remove image preview
+  const handleRemoveImage = () => {
+    setSignUpFormData((prevData) => ({
+      ...prevData,
+      profilePicture: null,
+      previewUrl: "",
+    }));
+    fileInputRef.current.value = "";
+  };
   return (
     <div className={styles.formWrapper}>
       <form className={styles.signUpForm}>
@@ -38,6 +66,7 @@ const SignUp = () => {
             maxLength={50}
             className={styles.formInput}
             onChange={handleChange}
+            value={signUpFormData.firstname}
           />
           {/* -------------------------------------- */}
           <label htmlFor="lastname">Last name</label>
@@ -49,6 +78,7 @@ const SignUp = () => {
             maxLength={50}
             className={styles.formInput}
             onChange={handleChange}
+            value={signUpFormData.lastname}
           />
           {/* -------------------------------------- */}
           <label htmlFor="dateOfBirth">Date of birth</label>
@@ -58,6 +88,7 @@ const SignUp = () => {
             id="dateOfBirth"
             className={styles.formInput}
             onChange={handleChange}
+            value={signUpFormData.dateOfBirth}
           />
           {/* -------------------------------------- */}
           <label htmlFor="profilePicture">Profile picture</label>
@@ -67,7 +98,24 @@ const SignUp = () => {
             id="profilePicture"
             className={styles.formInput}
             accept=".jpg, .png, .jpeg"
+            onChange={handleImageChange}
+            ref={fileInputRef}
           />
+          {signUpFormData.previewUrl && (
+            <div className={styles.imagePreviewContainer}>
+              <img
+                src={signUpFormData.previewUrl}
+                alt="User´s profile pic"
+                className={styles.imagePreview}
+              />
+              <button
+                className={styles.removeImageButton}
+                onClick={handleRemoveImage}
+              >
+                Remove photo
+              </button>
+            </div>
+          )}
           {/* -------------------------------------- */}
         </fieldset>
         <fieldset className={styles.formGroup}>
@@ -80,6 +128,7 @@ const SignUp = () => {
             placeholder="example@mail.com"
             className={styles.formInput}
             onChange={handleChange}
+            value={signUpFormData.email}
           />
           {/* -------------------------------------- */}
           <label htmlFor="password">Password</label>
@@ -90,6 +139,7 @@ const SignUp = () => {
             placeholder="Enter your password"
             className={styles.formInput}
             onChange={handleChange}
+            value={signUpFormData.password}
           />
           {/* -------------------------------------- */}
           <label htmlFor="confirmPassword">Confirm password</label>
@@ -100,6 +150,7 @@ const SignUp = () => {
             placeholder="Re-enter your password"
             className={styles.formInput}
             onChange={handleChange}
+            value={signUpFormData.confirmPassword}
           />
           {/* -------------------------------------- */}
         </fieldset>
