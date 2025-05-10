@@ -1,7 +1,11 @@
 // import { preview } from "vite";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import { useAuth } from "../../hooks/useAuth";
+import { useSignUpValidation } from "../../hooks/useSignUpValidation";
 import styles from "./SignUp.module.css";
+
 const SignUp = () => {
   // Declaring states and variable refs
   const [signUpFormData, setSignUpFormData] = useState({
@@ -15,6 +19,16 @@ const SignUp = () => {
     previewUrl: "",
   });
   const fileInputRef = useRef(null);
+
+  // Validate function from costume hook
+  const { validate, errors } = useSignUpValidation();
+
+  // Sign up function from costume hook
+  const { signUp, signUpErrors, user } = useAuth();
+
+  // Redirect users
+  const navigate = useNavigate();
+
   // Retrieve input values
   const handleChange = (e) => {
     if (e.target.type === "file") return;
@@ -49,9 +63,39 @@ const SignUp = () => {
     }));
     fileInputRef.current.value = "";
   };
+  // Function to handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validate(signUpFormData)) {
+      console.log("Form is not valid");
+      return;
+    }
+    try {
+      const userCredential = await signUp(
+        signUpFormData.email,
+        signUpFormData.password
+      );
+      console.log("User created successfully:", userCredential.user);
+      navigate("/verify-email");
+      // Reset form
+      setSignUpFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        dateOfBirth: "",
+        profilePicture: null,
+        previewUrl: "",
+      });
+      fileInputRef.current.value = "";
+    } catch (error) {
+      console.log("Error creating user:", error);
+    }
+  };
   return (
     <div className={styles.formWrapper}>
-      <form className={styles.signUpForm}>
+      <form className={styles.signUpForm} onSubmit={handleSubmit} noValidate>
         <h2>Sign-up Form</h2>
         <fieldset className={styles.formGroup}>
           <legend className={styles.formGroupTitle}>
@@ -68,6 +112,7 @@ const SignUp = () => {
             onChange={handleChange}
             value={signUpFormData.firstname}
           />
+          {errors && <p className={styles.errorMessage}>{errors.firstname}</p>}
           {/* -------------------------------------- */}
           <label htmlFor="lastname">Last name</label>
           <input
@@ -80,6 +125,8 @@ const SignUp = () => {
             onChange={handleChange}
             value={signUpFormData.lastname}
           />
+          {errors && <p className={styles.errorMessage}>{errors.lastname}</p>}
+
           {/* -------------------------------------- */}
           <label htmlFor="dateOfBirth">Date of birth</label>
           <input
@@ -130,6 +177,8 @@ const SignUp = () => {
             onChange={handleChange}
             value={signUpFormData.email}
           />
+          {errors && <p className={styles.errorMessage}>{errors.email}</p>}
+
           {/* -------------------------------------- */}
           <label htmlFor="password">Password</label>
           <input
@@ -141,10 +190,12 @@ const SignUp = () => {
             onChange={handleChange}
             value={signUpFormData.password}
           />
+          {errors && <p className={styles.errorMessage}>{errors.password}</p>}
+
           {/* -------------------------------------- */}
           <label htmlFor="confirmPassword">Confirm password</label>
           <input
-            type="confirmPassword"
+            type="password"
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Re-enter your password"
@@ -152,6 +203,10 @@ const SignUp = () => {
             onChange={handleChange}
             value={signUpFormData.confirmPassword}
           />
+          {errors && (
+            <p className={styles.errorMessage}>{errors.confirmPassword}</p>
+          )}
+
           {/* -------------------------------------- */}
         </fieldset>
         <Button className={styles.createAccountButton}>Create account</Button>
