@@ -50,3 +50,34 @@
 .errorMessage {
   color: var(--text-error);
 }
+.forgotPasswordButton {
+  background-color: transparent;
+  border: none;
+  font-size: var(--base-font-size);
+  text-decoration: underline;
+  color: inherit;
+}
+.resetFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+  color: var(--primary-color);
+}
+.resetFormContainer p {
+  line-height: 1.5;
+}
+.resetInput {
+  height: 32px;
+  padding: 0 var(--space-small);
+}
+.resetButtonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-medium);
+}
+.resetPasswordButton,
+.closeButton {
+  flex: 1;
+  height: 32px;
+  color: var(--primary-color);
+}

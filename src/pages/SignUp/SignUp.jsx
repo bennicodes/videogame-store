@@ -1,6 +1,8 @@
 // import { preview } from "vite";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { database } from "../../../firebaseConfig";
 import Button from "../../components/Button/Button";
 import { useAuth } from "../../hooks/useAuth";
 import { useSignUpValidation } from "../../hooks/useSignUpValidation";
@@ -75,8 +77,21 @@ const SignUp = () => {
         signUpFormData.email,
         signUpFormData.password
       );
+      const user = userCredential.user;
       console.log("User created successfully:", userCredential.user);
+
+      await setDoc(doc(database, "users", user.uid), {
+        uid: user.uid,
+        firstname: signUpFormData.firstname,
+        lastname: signUpFormData.lastname,
+        email: signUpFormData.email,
+        dateOfBirth: signUpFormData.dateOfBirth || "",
+        profilePicture: "" || null,
+        createdAt: serverTimestamp(),
+      });
       navigate("/verify-email");
+      console.log("User data saved to Firestore");
+
       // Reset form
       setSignUpFormData({
         firstname: "",
