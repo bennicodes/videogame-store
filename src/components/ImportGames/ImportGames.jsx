@@ -1,7 +1,7 @@
 import { collection, addDoc } from "firebase/firestore";
 import { database } from "../../../firebaseConfig";
 
-const AddGames = () => {
+const ImportGames = () => {
   const handleAddGames = async () => {
     try {
       const response = await fetch("/data/games.json");
@@ -21,4 +21,4 @@ const AddGames = () => {
   return <button onClick={handleAddGames}>Add Games to Firestore</button>;
 };
 
-export default AddGames;
+export default ImportGames;
