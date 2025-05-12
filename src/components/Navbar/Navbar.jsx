@@ -1,15 +1,23 @@
 import { faBars, faCartPlus, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
+import { useMemo } from "react";
 import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 import { auth } from "../../../firebaseConfig";
 import { getAuthContext } from "../../context/authContext";
+import { getCartContext } from "../../context/cartContext";
 import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const { cart } = getCartContext();
   const { user } = getAuthContext();
   const navigate = useNavigate();
+
+  // Number of cart items
+  const cartItemsCount = useMemo(() => {
+    return cart.reduce((count, item) => count + item.quantity, 0);
+  }, [cart]);
 
   // Function to sign out the user
   const handleSignout = async () => {
@@ -52,8 +60,11 @@ const Navbar = () => {
               )}
             </Link>
           )}
-          <Link className={styles.cartButton}>
+          <Link to="/cart" className={styles.cartButton}>
             <FontAwesomeIcon icon={faCartPlus} className={styles.cartIcon} />
+            {cartItemsCount > 0 && (
+              <span className={styles.cartBadge}>{cartItemsCount}</span>
+            )}
           </Link>
 
           <Button className={styles.hamburgerButton}>

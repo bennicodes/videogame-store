@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import { getCartContext } from "../../context/cartContext";
 import Button from "../Button/Button";
 import styles from "./GameItem.module.css";
 
 const GameItem = ({ game }) => {
+  const { dispatch } = getCartContext();
+  // Function to handle adding the game to the cart
+  const handleAddToCart = () => {
+    dispatch({ type: "ADD_TO_CART", payload: game });
+  };
   return (
     <div className={styles.gameCard}>
       <div className={styles.imageContainer}>
@@ -38,7 +44,9 @@ const GameItem = ({ game }) => {
       <Link to={`/games/${game.id}`} className={styles.gameLink}>
         Details
       </Link>
-      <Button className={styles.addToCartBtn}>Add to cart</Button>
+      <Button className={styles.addToCartBtn} onClick={handleAddToCart}>
+        Add to cart
+      </Button>
     </div>
   );
 };

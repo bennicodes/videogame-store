@@ -1,0 +1,99 @@
+/* PART 1 FORM BASIC STYLES */
+.contactForm {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/hero-section.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: var(--space-x-large);
+}
+.contactFormContainer {
+  width: 50%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+  padding: var(--space-medium) var(--space-large);
+  border-radius: var(--border-radius-medium);
+  background-color: rgba(255, 255, 255, 0.1); /* 🔹 Makes it semi-transparent */
+  backdrop-filter: blur(4px);
+  color: var(--text-light);
+}
+.formTitle {
+  font-weight: bold;
+  font-size: var(--medium-font-size);
+}
+.nameSection,
+.contactSection {
+  display: flex;
+  gap: var(--space-medium);
+}
+.nameSection div,
+.contactSection div {
+  flex-basis: 50%;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+.inputGroup p {
+  color: crimson;
+}
+.inputElement {
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.25rem;
+}
+.textareaElement {
+  width: 100%;
+  padding: 0.5rem;
+  resize: none;
+}
+.submitButton {
+  height: 48px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-radius: var(--border-radius-small);
+  border: none;
+  transition: all 0.3s ease-in-out;
+  font-size: var(--base-font-size);
+}
+.submitButton:hover {
+  background-color: var(--secondary-color);
+}
+/* END OF PART 1 */
+.messageErrorAndCount {
+  display: block;
+  width: 100%;
+}
+
+.closeModalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 380px;
+  text-decoration: none;
+  height: 32px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-small);
+  transition: all 0.3s ease-in-out;
+  font-size: var(--base-font-size);
+  margin: 0 auto;
+}
+.closeModalButton:hover {
+  background-color: var(--primary-color);
+}
+.contactModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+}

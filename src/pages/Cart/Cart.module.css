@@ -1,0 +1,159 @@
+.cartContainer {
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-large);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/images/hero-section2.jpg");
+}
+
+.cartListContainer {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+  border-radius: 12px;
+  padding: var(--space-medium);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  color: var(--text-light);
+}
+
+.cartList {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-medium);
+  padding: var(--space-medium);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.gameImage {
+  max-width: 90px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gameDetails {
+  flex: 2;
+  font-size: var(--medium-font-size);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-small);
+}
+
+.quantity {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.removeButton {
+  max-width: 100px;
+  background-color: var(--text-error);
+  color: var(--text-light);
+  padding: var(--space-small);
+  border: none;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.removeButton:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.totalAmount {
+  padding: var(--space-medium);
+  font-size: var(--large-font-size);
+  font-weight: bold;
+}
+.toCheckoutLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 380px;
+  text-decoration: none;
+  height: 48px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-small);
+  transition: all 0.3s ease-in-out;
+  font-size: var(--base-font-size);
+  margin: 0 auto;
+}
+.toCheckoutLink:hover {
+  background-color: var(--primary-color);
+}
+
+.redirectLinksContainer {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-medium);
+}
+.redirectLink {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 48px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-small);
+  transition: all 0.3s ease-in-out;
+  font-size: var(--base-font-size);
+}
+.closeModalButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 48px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-small);
+  transition: all 0.3s ease-in-out;
+  font-size: var(--base-font-size);
+}
+.closeModalButton:hover,
+.redirectLink:hover {
+  background-color: var(--primary-color);
+}
+.redirectModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+}
+.redirectModalContent p {
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+.emptyCard {
+  font-size: var(--medium-font-size);
+  color: var(--text-light);
+}
+
+@media screen and (max-width: 600px) {
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .gameImage {
+    max-width: 80px;
+  }
+}

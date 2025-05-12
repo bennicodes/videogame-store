@@ -9,7 +9,6 @@ export const useFetchGames = () => {
     const fetchGames = async () => {
       try {
         const querySnapshot = await getDocs(collection(database, "games"));
-        console.log(querySnapshot);
 
         const gamesList = querySnapshot.docs.map((doc) => ({
           id: doc.id,
