@@ -24,7 +24,7 @@ const SignIn = () => {
   // Redirection
   const navigate = useNavigate();
 
-  // Retreive sign in form values
+  // Retrieve sign in form values
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setSignInFormData((prevData) => ({ ...prevData, [name]: value }));
